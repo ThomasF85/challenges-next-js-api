@@ -6,9 +6,6 @@ export default function Exercise3() {
   async function fetchExercise3(data) {
     const res = await fetch('/api/users', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify(data),
     });
     const message = await res.json();
