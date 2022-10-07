@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 export default function Exercise4() {
+  const [id, setId] = useState('');
   const [data4, setData4] = useState('...loading');
 
   async function fetchExercise4(id) {
@@ -14,9 +15,19 @@ export default function Exercise4() {
   return (
     <>
       <h2>Exercise 4</h2>
+      <form>
+        <label htmlFor="id">Enter id:</label>
+        <input
+          id="id"
+          name="id"
+          value={id}
+          onChange={event => setId(event.target.value)}
+          style={{marginBottom: '1em'}}
+        />
+      </form>
       <button
         onClick={() => {
-          fetchExercise4('627257b495f2ad25c3c06e41');
+          fetchExercise4(id);
         }}
       >
         Delete user via API
