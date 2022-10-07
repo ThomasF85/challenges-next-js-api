@@ -1,5 +1,5 @@
 export default async function handler(request, response) {
-  if (req.method === 'GET') {
+  if (request.method === 'GET') {
     const data = [];
     return;
   }
