@@ -27,7 +27,7 @@ export default function Exercise3() {
           });
         }}
       >
-        Post new data to API under api/users/add
+        Post new data to API under api/users
       </button>
       <pre>{data3}</pre>
     </>
